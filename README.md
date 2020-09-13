@@ -13,6 +13,8 @@
 
 ![fernandopal github stats](https://github-readme-stats.vercel.app/api?username=fernandopal&count_private=true&show_icons=true&title_color=ffa726&text_color=C4C4C4&icon_color=C4C4C4&bg_color=111111)
 
+![](https://komarev.com/ghpvc/?username=fernandopal&color=ffa726)
+
 [website]: https://www.fernandopal.es
 [yato-repo]: https://github.com/fernandopal/yato-public
 [yato-web]: https://yato.fernandopal.es
