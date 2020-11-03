@@ -16,7 +16,7 @@
 ![](https://komarev.com/ghpvc/?username=fernandopal&color=ffa726)
 
 [website]: https://www.fernandopal.es
-[yato-repo]: https://github.com/fernandopal/yato-public
+[yato-repo]: https://github.com/fernandopal/yato
 [yato-web]: https://yato.fernandopal.es
 [twitter]: https://twitter.com/fernandopm00
 [instagram]: https://instagram.com/fernando_pm00
