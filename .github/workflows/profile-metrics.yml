@@ -28,7 +28,7 @@ jobs:
           plugin_languages_ignored: c, c#, php, kotlin                  # List of languages to ignore
           #plugin_languages_skipped: my-test-repo                       # List of repositories to skip
           plugin_languages_aliases: "JavaScript:JS, TypeScript:TS"      # Customize languages names with aliases
-          plugin_la nguages_threshold: 5%                               # Hides all languages less than %
+          plugin_languages_threshold: 5%                               # Hides all languages less than %
           plugin_languages_limit: 5                                     # Display up to 8 languages
           plugin_languages_sections: most-used, recently-used           # Display most used and recently used languages stats
           plugin_languages_indepth: no                                  # Get indepth stats (see documentation before enabling)
