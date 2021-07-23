@@ -33,15 +33,21 @@ jobs:
         plugin_languages_sections: most-used, recently-used           # Display most used and recently used languages stats
         plugin_languages_indepth: no                                  # Get indepth stats (see documentation before enabling)
         plugin_languages_recent_load: 500                             # Load up to 500 events to compute recently used stats
-        plugin_languages_recent_days: 30                              # Limit recently used stats to last week
+        plugin_languages_recent_days: 60                              # Limit recently used stats to last week
         commits_authoring: mail@fernandopal.es, f.pal.moreno@gmail.com
         #end
 
-        #Lines of code plugin
-        plugin_lines: yes
+        #Code habits plugin
+        plugin_habits: yes
+        plugin_habits_from: 200       # Use 200 events to compute habits
+        plugin_habits_days: 60        # Keep only events from last 14 days
+        plugin_habits_facts: yes      # Display facts section
+        plugin_habits_charts: yes     # Display charts section
+        plugin_habits_trim: yes       # Trim unused hours on daily chart
+        config_timezone: Europe/Paris # Set timezone
         #end
           
-        config_order: base.header, languages, lines
+        config_order: base.header, languages, habits
 
     - name: Right column
       if: ${{ success() || failure() }}
@@ -58,5 +64,12 @@ jobs:
         plugin_pagespeed_screenshot: yes                       # Display a screenshot of your website
         plugin_pagespeed_url: .user.website                    # Website to audit (defaults to your GitHub linked website)
         #end
+        
+        #Active projects plugin
+        plugin_projects: yes
+        plugin_projects_repositories: fernandopal/yato/projects/1
+        plugin_projects_limit: 4                                    # Limit to 4 entries
+        plugin_projects_descriptions: yes                           # Display projects descriptions
+        #end
 
-        config_order: pagespeed
+        config_order: projects, pagespeed
