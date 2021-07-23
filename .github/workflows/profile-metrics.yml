@@ -22,6 +22,7 @@ jobs:
         token: ${{ secrets.METRICS_TOKEN }}
         committer_token: ${{ secrets.GITHUB_TOKEN }}
         base: header
+        
         #Languages used plugin
         plugin_languages: yes
         plugin_languages_ignored: c, c#, php, kotlin                  # List of languages to ignore
@@ -47,6 +48,9 @@ jobs:
       uses: lowlighter/metrics@main
       with:
         filename: metrics-right.svg
+        token: ${{ secrets.METRICS_TOKEN }}
+        committer_token: ${{ secrets.GITHUB_TOKEN }}
+        
         #Website performance plugin
         plugin_pagespeed: yes
         plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }} # Optional but recommended
