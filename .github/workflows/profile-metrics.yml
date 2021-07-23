@@ -14,39 +14,45 @@ jobs:
   github-metrics-personal:
     runs-on: ubuntu-latest
     steps:
-      - name: Personal Metrics
-        if: ${{ success() || failure() }}
-        uses: lowlighter/metrics@main
-        with:
-          filename: github-metrics.svg
-          token: ${{ secrets.METRICS_TOKEN }}
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          base: header
+    - name: Left Column
+      if: ${{ success() || failure() }}
+      uses: lowlighter/metrics@main
+      with:
+        filename: metrics-left.svg
+        token: ${{ secrets.METRICS_TOKEN }}
+        committer_token: ${{ secrets.GITHUB_TOKEN }}
+        base: header
+        #Languages used plugin
+        plugin_languages: yes
+        plugin_languages_ignored: c, c#, php, kotlin                  # List of languages to ignore
+        #plugin_languages_skipped: my-test-repo                       # List of repositories to skip
+        plugin_languages_aliases: "JavaScript:JS, TypeScript:TS"      # Customize languages names with aliases
+        plugin_languages_threshold: 5%                               # Hides all languages less than %
+        plugin_languages_limit: 5                                     # Display up to 8 languages
+        plugin_languages_sections: most-used, recently-used           # Display most used and recently used languages stats
+        plugin_languages_indepth: no                                  # Get indepth stats (see documentation before enabling)
+        plugin_languages_recent_load: 500                             # Load up to 500 events to compute recently used stats
+        plugin_languages_recent_days: 30                              # Limit recently used stats to last week
+        commits_authoring: mail@fernandopal.es, f.pal.moreno@gmail.com
+        #end
+
+        #Lines of code plugin
+        plugin_lines: yes
+        #end
           
-          #Languages used plugin
-          plugin_languages: yes
-          plugin_languages_ignored: c, c#, php, kotlin                  # List of languages to ignore
-          #plugin_languages_skipped: my-test-repo                       # List of repositories to skip
-          plugin_languages_aliases: "JavaScript:JS, TypeScript:TS"      # Customize languages names with aliases
-          plugin_languages_threshold: 5%                               # Hides all languages less than %
-          plugin_languages_limit: 5                                     # Display up to 8 languages
-          plugin_languages_sections: most-used, recently-used           # Display most used and recently used languages stats
-          plugin_languages_indepth: no                                  # Get indepth stats (see documentation before enabling)
-          plugin_languages_recent_load: 500                             # Load up to 500 events to compute recently used stats
-          plugin_languages_recent_days: 30                              # Limit recently used stats to last week
-          commits_authoring: mail@fernandopal.es, f.pal.moreno@gmail.com
-          #end
-          
-          #Lines of code plugin
-          plugin_lines: yes
-          #end
-          
-          #Website performance plugin
-          plugin_pagespeed: yes
-          plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }} # Optional but recommended
-          plugin_pagespeed_detailed: yes                         # Print detailed audit metrics
-          plugin_pagespeed_screenshot: yes                       # Display a screenshot of your website
-          plugin_pagespeed_url: .user.website                    # Website to audit (defaults to your GitHub linked website)
-          #end
-          
-          config_order: base.header, languages, lines, pagespeed
+        config_order: base.header, languages, lines
+
+    - name: Right column
+      if: ${{ success() || failure() }}
+      uses: lowlighter/metrics@main
+      with:
+        filename: metrics-right.svg
+        #Website performance plugin
+        plugin_pagespeed: yes
+        plugin_pagespeed_token: ${{ secrets.PAGESPEED_TOKEN }} # Optional but recommended
+        plugin_pagespeed_detailed: yes                         # Print detailed audit metrics
+        plugin_pagespeed_screenshot: yes                       # Display a screenshot of your website
+        plugin_pagespeed_url: .user.website                    # Website to audit (defaults to your GitHub linked website)
+        #end
+
+        config_order: pagespeed
