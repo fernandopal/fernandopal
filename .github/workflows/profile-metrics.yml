@@ -67,7 +67,7 @@ jobs:
         
         #Active projects plugin
         plugin_projects: yes
-        plugin_projects_repositories: fernandopal/yato/projects/1
+        #plugin_projects_repositories: fernandopal/yato/projects/1
         plugin_projects_limit: 4                                    # Limit to 4 entries
         plugin_projects_descriptions: yes                           # Display projects descriptions
         #end
