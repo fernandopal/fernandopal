@@ -1336,16 +1336,15 @@
         Recently used languages
       </h3>
                 <small>
-            estimation from 23 edited files from 37 commits over last 45 days
+            estimation from 30 edited files from 37 commits over last 45 days
           </small>
                 <svg class="bar" xmlns="http://www.w3.org/2000/svg" width="460" height="8">
                     <mask id="languages-bar">
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="199.07421013960322" height="8" fill="#563d7c"/>
-                    <rect mask="url(#languages-bar)" x="199.07421013960322" y="0" width="156.48787656135195" height="8" fill="#e34c26"/>
-                    <rect mask="url(#languages-bar)" x="355.5620867009552" y="0" width="104.43791329904482" height="8" fill="#2b7489"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="371.63287086446104" height="8" fill="#563d7c"/>
+                    <rect mask="url(#languages-bar)" x="371.63287086446104" y="0" width="88.36712913553896" height="8" fill="#e34c26"/>
                 </svg>
                 <div class="field center horizontal-wrap fill-width">
                     <div class="field center no-wrap language">
@@ -1355,10 +1354,6 @@
                     <div class="field center no-wrap language">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill="#e34c26" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/></svg>
                 HTML
-              </div>
-                    <div class="field center no-wrap language">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill="#2b7489" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/></svg>
-                TS
               </div>
                 </div>
             </section>
